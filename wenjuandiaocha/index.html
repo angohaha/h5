@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script>
+<script>
+    // 根据不同设备的理想视口宽度动态设置根元素的`font-size`。
+    let idealViewWidth = window.screen.width;
+    const BASICVALUE = 750;
+    document.documentElement.style.fontSize = (idealViewWidth / BASICVALUE) * 100 + 'px';
+</script>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="./css/index.css">
+
+<body>
+    <div class="main">
+        <!-- 医生满意度调查 -->
+        <div class="row_top">
+            <h2 class="title">
+                <span><img src="./image/wenjuan.png" alt=""></span> 医生满意度调查
+                <b>权限</b>
+            </h2>
+            <a href="" class="banner">
+                <img src="./image/yisheng.png" alt="">
+            </a>
+            <div class="count">
+                <div>
+                    <span>1344次</span>
+                    <span>累计浏览量</span>
+                </div>
+                <div>
+                    <span>234人</span>
+                    <span>有效反馈</span>
+                </div>
+            </div>
+            <div class="time">
+                <div>
+                    截止时间:&nbsp;2019-8-20
+                </div>
+                <div>
+                    <a href="">
+                        查看结果
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 地方医院 -->
+        <div class="row_middle">
+
+        </div>
+        <!-- 护士满意度调查 -->
+        <div class="row_bottom">
+
+        </div>
+    </div>
+</body>
+
+</html>
