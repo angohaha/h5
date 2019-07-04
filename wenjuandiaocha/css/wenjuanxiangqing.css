@@ -47,7 +47,7 @@ body {
     font-size: 0.32rem;
     color: #333333;
     font-weight: bold;
-    margin: 0.77rem 0 0.3rem;
+    margin: 0rem 0 0.3rem;
 }
 
 .check_title a {
@@ -246,4 +246,17 @@ ul.checkbox3 li:last-child {
     border-radius: 0.15rem;
     border: 1px solid transparent;
     outline: none;
+}
+
+.description p {
+    font-size: 0.3rem;
+    color: #333333;
+    display: block;
+    margin: 0.3rem 0;
+    line-height: 0.5rem;
+}
+
+.description img {
+    width: 100%;
+    vertical-align: middle;
 }
