@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script>
+
+<script>
+    // 根据不同设备的理想视口宽度动态设置根元素的`font-size`。
+    let idealViewWidth = window.screen.width;
+    const BASICVALUE = 750;
+    document.documentElement.style.fontSize = (idealViewWidth / BASICVALUE) * 100 + 'px';
+</script>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<script src="./js/jquery.raty.js"></script>
+<link rel="stylesheet" href="./css/questionnaire.css">
+
+<body>
+    <div class="main">
+        <div class="content_top">
+            <!-- 标题 -->
+            <h1 class="title_header">
+                医生满意度调查
+            </h1>
+            <!-- 详情描述 -->
+            <p>
+                注：您的“全选好评”之后还可以根据实际情况修改评分
+            </p>
+            <img src="./image/yisheng.png" alt="">
+        </div>
+        <div class="content_list">
+            <label class="check"><input type="checkbox" id="check">全部好评</label>
+            <div class="list_check">
+                <h2 class="check_title">
+                    <b>* </b><a href="">1 .您对本科室接诊医生的服务态度满意吗？</a>
+                </h2>
+                <div class="starts">
+                    <span id="dir0" class="hint">点击星星评分</span>
+                    <div id="pingStar0" class="target-demo"></div>
+                </div>
+            </div>
+            <div class="list_check">
+                <h2 class="check_title">
+                    <b>* </b><a href="">2 .您对本科室接诊医生的服务态度满意吗？</a>
+                </h2>
+                <div class="starts">
+                    <span id="dir1" class="hint">点击星星评分</span>
+                    <div id="pingStar1" class="target-demo"></div>
+                </div>
+            </div>
+            <div class="list_check">
+                <h2 class="check_title">
+                    <b>* </b><a href="">3 .您对本科室接诊医生的服务态度满意吗？</a>
+                </h2>
+                <div class="starts">
+                    <span id="dir2" class="hint">点击星星评分</span>
+                    <div id="pingStar2" class="target-demo"></div>
+                </div>
+            </div>
+            <div class="list_check">
+                <h2 class="check_title">
+                    <b>* </b><a href="">4 .您对本科室接诊医生的服务态度满意吗？</a>
+                </h2>
+                <div class="starts">
+                    <span id="dir3" class="hint">点击星星评分</span>
+                    <div id="pingStar3" class="target-demo"></div>
+                </div>
+            </div>
+            <div class="list_check">
+                <h2 class="check_title">
+                    <b>* </b><a href="">5 .您对本科室接诊医生的服务态度满意吗？</a>
+                </h2>
+                <div class="starts">
+                    <span id="dir4" class="hint">点击星星评分</span>
+                    <div id="pingStar4" class="target-demo"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 提交 -->
+        <label>
+            <!-- disabled="disabled" 当前为禁用状态 -->
+            <input type="button" value="提交" class="tijiao" disabled="disabled">
+        </label>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function() {
+        $.fn.raty.defaults.path = './image';
+        var x = document.getElementsByClassName("starts");
+        for (var i = 0; i < x.length; i++) {
+            $('#pingStar' + i).raty({
+                number: 5, //多少个星星设置
+                score: function() {
+                    return $(this).attr('data-score');
+                },
+                targetType: 'hint', //类型选择，number是数字值，hint，是设置的数组值
+                path: './image',
+                hints: ['不了解', '不满意', '一般', '比较满意', '满意'],
+                starOff: 'xingxing.png',
+                starOn: 'xingxing2.png',
+                target: '#dir' + i,
+                cancel: false,
+                targetKeep: true,
+                targetText: '请选择评分',
+                click: function(score, evt) {
+                    console.log('ID: ' + this.id + "\nscore: " + score + "\nevent: " + evt);
+                }
+
+            });
+
+        }
+        $(document).on('click', '#check', function() {
+            if ($(this).is(":checked")) {
+                for (var i = 0; i < x.length; i++) {
+                    $('#pingStar' + i).raty({
+                        number: 5, //多少个星星设置
+                        score: 5,
+                        targetType: 'hint', //类型选择，number是数字值，hint，是设置的数组值
+                        path: './image',
+                        hints: ['不了解', '不满意', '一般', '比较满意', '满意'],
+                        starOff: 'xingxing.png',
+                        starOn: 'xingxing2.png',
+                        target: '#dir' + i,
+                        cancel: false,
+                        targetKeep: true,
+                        targetText: '请选择评分',
+                        click: function() {
+                            return false;
+                            console.log('ID: ' + this.id + "\nscore: " + score + "\nevent: " + evt);
+                        }
+                    });
+                }
+            } else {
+                for (var i = 0; i < x.length; i++) {
+                    $('#pingStar' + i).raty({
+                        number: 5, //多少个星星设置
+                        score: function() {
+                            return $(this).attr('data-score');
+                        },
+                        targetType: 'hint', //类型选择，number是数字值，hint，是设置的数组值
+                        path: './image',
+                        hints: ['不了解', '不满意', '一般', '比较满意', '满意'],
+                        starOff: 'xingxing.png',
+                        starOn: 'xingxing2.png',
+                        target: '#dir' + i,
+                        cancel: false,
+                        targetKeep: true,
+                        targetText: '请选择评分',
+                        click: function(score, evt) {
+                            console.log('ID: ' + this.id + "\nscore: " + score + "\nevent: " + evt);
+                        }
+                    });
+                }
+            }
+        });
+    });
+</script>
