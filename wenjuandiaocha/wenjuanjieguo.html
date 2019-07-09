@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script>
+<script>
+    // 根据不同设备的理想视口宽度动态设置根元素的`font-size`。
+    let idealViewWidth = window.screen.width;
+    const BASICVALUE = 750;
+    document.documentElement.style.fontSize = (idealViewWidth / BASICVALUE) * 100 + 'px';
+</script>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="./css/wenjuanjieguo.css">
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="content_top">
+                <img class="duihao" src="./image/duihao2.png" alt="">
+                <h2>谢谢您的反馈</h2>
+                <p>如果您有提出意见建议并留下联系方式，我们将可能与您联系，请保持您的电话畅通。</p>
+            </div>
+            <div class="content_bot">
+                <a href="">返回问卷首页</a>
+                <a class="line">|</a>
+                <a href="">查看问卷结果</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

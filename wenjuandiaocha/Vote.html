@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择投票</title>
+</head>
+<!-- <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script> -->
+<script>
+    // 根据不同设备的理想视口宽度动态设置根元素的`font-size`。
+    let idealViewWidth = window.screen.width;
+    const BASICVALUE = 750;
+    document.documentElement.style.fontSize = (idealViewWidth / BASICVALUE) * 100 + 'px';
+</script>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="./css/Vote.css">
+
+<body>
+    <div class="main">
+        <div class="article">
+            <h1 class="h1-title">国家医保局LOGO征集投票</h1>
+        </div>
+        <div class="content">
+            <p>国家医疗保障局（National Healthcare Security Administration）作为国务院直属机构，于2018年5月31日挂牌，一年来受到社会各界的广泛关注。为准确、全面展现国家医疗保障局机构形象，提升机构的社会认知度，引导公众关心、支持医疗保障事业，现面向全社会公开征集国家医疗保障局LOGO设计方案。</p>
+            <img src="./image/yiyuan.png" alt="">
+        </div>
+        <div class="grid-vote">
+            <div class="voteItem">
+                <div class="voteTop">
+                    <span class="number">01</span>
+                    <span class="name">魑魅魍魉</span>
+                </div>
+                <div class="voteImg">
+                    <img src="./image/yiyuan.png" alt="">
+                </div>
+                <div class="voteButton">
+                    <button>投票</button>
+                    <p>已投<span>1445</span>票</p>
+                </div>
+            </div>
+            <div class="voteItem">
+                <div class="voteTop">
+                    <span class="number">01</span>
+                    <span class="name">魑魅魍魉</span>
+                </div>
+                <div class="voteImg">
+                    <img src="./image/yiyuan.png" alt="">
+                </div>
+                <div class="voteButton">
+                    <button>投票</button>
+                    <p>已投<span>1445</span>票</p>
+                </div>
+            </div>
+            <div class="voteItem">
+                <div class="voteTop">
+                    <span class="number">01</span>
+                    <span class="name">魑魅魍魉</span>
+                </div>
+                <div class="voteImg">
+                    <img src="./image/yiyuan.png" alt="">
+                </div>
+                <div class="voteButton">
+                    <button>投票</button>
+                    <p>已投<span>1445</span>票</p>
+                </div>
+            </div>
+            <div class="voteItem">
+                <div class="voteTop">
+                    <span class="number">01</span>
+                    <span class="name">魑魅魍魉</span>
+                </div>
+                <div class="voteImg">
+                    <img src="./image/yiyuan.png" alt="">
+                </div>
+                <div class="voteButton">
+                    <button>投票</button>
+                    <p>已投<span>1445</span>票</p>
+                </div>
+            </div>
+            <div class="voteItem">
+                <div class="voteTop">
+                    <span class="number">01</span>
+                    <span class="name">魑魅魍魉</span>
+                </div>
+                <div class="voteImg">
+                    <img src="./image/yiyuan.png" alt="">
+                </div>
+                <div class="voteButton">
+                    <button>投票</button>
+                    <p>已投<span>1445</span>票</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('button').click(function() {
+        $(this).addClass('active').html('已投');
+    })
+</script>
+
+</html>

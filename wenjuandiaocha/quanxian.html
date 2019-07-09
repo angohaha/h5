@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script>
+<script>
+    // 根据不同设备的理想视口宽度动态设置根元素的`font-size`。
+    let idealViewWidth = window.screen.width;
+    const BASICVALUE = 750;
+    document.documentElement.style.fontSize = (idealViewWidth / BASICVALUE) * 100 + 'px';
+</script>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="./css/wenjuanjieguo.css">
+
+<body>
+    <div class="main_quanxian">
+        <div class="content">
+            <div class="content_top">
+                <img class="quanxian" src="./image/quanxian2.png" alt="">
+                <h2 class="title_quanxian">权限不足!</h2>
+            </div>
+            <div class="content_bot">
+                <a href="">返回问卷首页</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

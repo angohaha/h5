@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+b {
+    font-weight: normal;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #FAFAFA;
+}
+
+.main {
+    padding: 1.57rem 0.64rem 0;
+}
+
+.main_quanxian {
+    padding: 2.1rem 0.64rem 0;
+}
+
+.content {
+    width: 100%;
+    /* height: 7.2rem; */
+    background: rgba(255, 255, 255, 1);
+    box-shadow: -1px 1px 34px 0.06rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content .content_top {
+    padding: 0.7rem 0.5rem 0;
+}
+
+.content .content_top img.duihao {
+    width: 2.08rem;
+    height: 2.08rem;
+}
+
+.content .content_top img.quanxian {
+    width: 1.66rem;
+    height: 2rem;
+}
+
+.content .content_top h2 {
+    font-size: 0.34rem;
+    color: #000000;
+    font-weight: normal;
+}
+
+.content .content_top h2 {
+    font-size: 0.34rem;
+    color: #000000;
+    font-weight: normal;
+}
+
+.content .content_top h2.title_quanxian {
+    margin: 0.4rem 0 0.6rem;
+}
+
+.content .content_top p {
+    font-size: 0.3rem;
+    color: #6A6A6A;
+    text-align: left;
+    line-height: 0.5rem;
+    display: inline-block;
+    margin: 0.5rem 0 1.2rem;
+}
+
+.content .content_bot {
+    width: 100%;
+    height: 0.9rem;
+    display: flex;
+    justify-content: space-around;
+    background: #F8F8F8;
+    align-items: center;
+}
+
+.content .content_bot b {
+    width: 0.02rem;
+    height: 0.3rem;
+    font-weight: normal;
+    color: #000000;
+    display: block;
+}
+
+.content .content_bot a {
+    color: #16D1B4;
+    font-size: 0.34rem;
+}
+
+.content .content_bot .line {
+    color: #000;
+}

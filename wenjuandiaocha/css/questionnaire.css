@@ -278,6 +278,7 @@ ul.checkbox3 li:last-child {
     border-radius: 0.15rem;
     border: 1px solid transparent;
     outline: none;
+    -webkit-appearance: none;
 }
 
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投票详情</title>
+</head>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="./css/VoteIndex.css">
+<script>
+    // 根据不同设备的理想视口宽度动态设置根元素的`font-size`。
+    let idealViewWidth = window.screen.width;
+    const BASICVALUE = 750;
+    document.documentElement.style.fontSize = (idealViewWidth / BASICVALUE) * 100 + 'px';
+</script>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="PeoNum">
+                <span>参与人数：</span>
+                <span class="number">130</span>
+            </div>
+            <div class="VoteNum">
+                <span>累计投票数：</span>
+                <span class="number">130</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="conTitle">
+                <div class="contitle-left">
+                    <span class="num">01</span>
+                    <span class="name">魑魅魍魉</span>
+                </div>
+                <div class="contitle-right">
+                    <span>已投票数：</span>
+                    <span class="number">130</span>
+                </div>
+            </div>
+            <div class="conImg">
+                <img src="./image/yiyuan.png" alt="">
+            </div>
+            <p class="content-p">国家医疗保障局（National Healthcare Security Administration）作为国务院直属机构，于2018年5月31日挂牌，一年来受到社会各界的广泛关注。为准确、全面展现国家医疗保障局机构形象，提升机构的社会认知度，引导公众关心、支持医疗保障事业，现面向全社会公开征集国家医疗保障局LOGO设计方案。
+            </p>
+        </div>
+        <div class="button">
+            <button class="btn_1">返回投票首页</button>
+            <button class="btn_2">投票</button>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        $('.btn_1').click(function() {
+            alert('返回投票首页')
+        });
+        $('.btn_2').click(function() {
+            alert('投票')
+        });
+    })
+</script>
+
+</html>

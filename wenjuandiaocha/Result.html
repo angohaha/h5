@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script>
+</head>
+<script src="./js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="./css/Result.css">
+<script>
+    // 根据不同设备的理想视口宽度动态设置根元素的`font-size`。
+    let idealViewWidth = window.screen.width;
+    const BASICVALUE = 750;
+    document.documentElement.style.fontSize = (idealViewWidth / BASICVALUE) * 100 + 'px';
+</script>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="PeoNum">
+                <span>累计浏览：</span>
+                <span class="number">130</span>
+            </div>
+            <div class="VoteNum">
+                <span>有效反馈：</span>
+                <span class="number">130</span>
+            </div>
+        </div>
+        <div class="">
+            <div class="content">
+                <h1 class="title">1 .我觉得闷闷不乐，情绪低沉，我跟难过，而且现在还一直想休息。</h1>
+                <div class="iconText">
+                    <div class="icon-0 icon">
+                        <div class='img'></div>
+                        <div class='img'></div>
+                    </div>
+                    <div class="text">
+                        <span>占比</span>
+                        <span>数量</span>
+                    </div>
+                </div>
+                <div class="ul-0">
+                    <div class="content-canvas item_tab">
+                        <div class="canvas" id="can-0"></div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #9DDBBF"></span><span class="textSpan">从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #80C269"></span><span class="textSpan">一天哭三次</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #7ECEF4"></span><span class="textSpan">不挨打就不会哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #D68066"></span><span class="textSpan">一天哭两次</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-pro item_tab" style="display: none">
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #16D1B4;"></div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #16D1B4;"></div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #80C269;"></div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #7ECEF4;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content">
+                <h1 class="title">1 .我觉得闷闷不乐，情绪低沉，我跟难过，而且现在还一直想休息。</h1>
+                <div class="iconText">
+                    <div class="icon-1 icon">
+                        <div class='img'></div>
+                        <div class='img'></div>
+                    </div>
+                    <div class="text">
+                        <span>占比</span>
+                        <span>数量</span>
+                    </div>
+                </div>
+                <div class="ul-1">
+                    <div class="content-canvas item_tab">
+                        <div class="canvas" id="can-1"></div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #9DDBBF"></span><span class="textSpan">从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #80C269"></span><span class="textSpan">一天哭三次</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #7ECEF4"></span><span class="textSpan">不挨打就不会哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span class="color" style="background: #D68066"></span><span class="textSpan">一天哭两次</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-pro item_tab" style="display: none">
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #16D1B4;"></div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #16D1B4;"></div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #80C269;"></div>
+                            </div>
+                        </div>
+                        <div class="proItem">
+                            <div class="proItem-top">
+                                <div class="item-left"><span>从来都不哭</span></div>
+                                <div class="item-right">
+                                    <span>10%</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="proItem-bottom">
+                                <div class="proActive" style="width: 10%;background: #7ECEF4;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="button">
+            <button>返回问卷首页</button>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        var text = '从来都不哭';
+        var e = window.screen.width;
+        // 基于准备好的dom，初始化echarts实例
+        var myChart0 = echarts.init(document.getElementById('can-0'));
+        var myChart1 = echarts.init(document.getElementById('can-1'));
+
+        // 指定图表的配置项和数据
+        option0 = {
+            graphic: {
+                type: 'text',
+                left: 'center',
+                top: 'center',
+                z: 2,
+                zlevel: 100,
+                style: {
+                    text: text + '  10',
+                    fill: '#9DDBBF',
+                    fontSize: e / 750 * 24
+                }
+            },
+            color: ['#9DDBBF', '#80C269', '#7ECEF4', '#D68066'],
+            series: [{
+                name: '访问来源',
+                type: 'pie',
+                radius: ['70%', '100%'],
+                hoverAnimation: false,
+                avoidLabelOverlap: false,
+                labelLine: {
+                    show: false
+                },
+                label: {
+                    show: false,
+                },
+                data: [{
+                    value: 1548,
+                    name: '直接访问'
+                }, {
+                    value: 50,
+                    name: '搜索引擎'
+                }, {
+                    value: 90,
+                    name: '123'
+                }, {
+                    value: 100,
+                    name: '3454'
+                }, ],
+            }]
+        };
+        option1 = {
+            graphic: {
+                type: 'text',
+                left: 'center',
+                top: 'center',
+                z: 2,
+                zlevel: 100,
+                style: {
+                    text: text + '  10',
+                    fill: '#9DDBBF',
+                    fontSize: e / 750 * 24
+                }
+            },
+            color: ['#9DDBBF', '#80C269', '#7ECEF4', '#D68066'],
+            series: [{
+                name: '访问来源',
+                type: 'pie',
+                radius: ['70%', '100%'],
+                hoverAnimation: false,
+                avoidLabelOverlap: false,
+                labelLine: {
+                    show: false
+                },
+                label: {
+                    show: false,
+                },
+                data: [{
+                    value: 10,
+                    name: '直接访问'
+                }, {
+                    value: 70,
+                    name: '搜索引擎'
+                }, {
+                    value: 10,
+                    name: '123'
+                }, {
+                    value: 10,
+                    name: '34534'
+                }, ],
+            }]
+        };
+        myChart1.setOption(option1);
+        myChart0.setOption(option0);
+        $('.content').each(function() {
+            var list = $(this).index();
+            $('.icon-' + list + ' .img').each(function() {
+                $('.icon-' + list).children('.img').eq(0).addClass("active");
+                $(this).click(function() {
+                    $(this).addClass("active").siblings().removeClass("active")
+                    var index = $(this).index();
+                    $('.ul-' + list + ' .item_tab').eq(index).slideDown().siblings()
+                        .slideUp();
+                })
+            })
+            $('.ul-' + list).find('.textSpan').click(function() {
+                console.log(list);
+                if (list == 0) {
+                    text = $(this).text();
+                    myChart0.clear();
+                    option0.graphic.style.text = text + ' 10';
+                    myChart0.setOption(option0);
+                } else {
+                    text = $(this).text();
+                    myChart1.clear();
+                    option1.graphic.style.text = text + ' 10';
+                    myChart1.setOption(option1)
+                }
+            })
+        })
+    })
+</script>
+
+</html>
